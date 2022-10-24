@@ -33,6 +33,8 @@ def forward_progate(network,x):
     inputs = x
     for layer in network:
         new_input = []
+        
+
         for neuron in layer:
             activation = activate(neuron['Weights'],inputs)
             neuron['output'] = transfer(activation)
